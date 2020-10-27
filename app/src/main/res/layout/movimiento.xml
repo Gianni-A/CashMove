@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/lineas" >
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabHost
+                android:id="@+id/thTab"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+                    </TabWidget>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <LinearLayout
+                            android:id="@+id/tab1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/ediCodOb"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:hint="Codigo del objeto"
+                                android:inputType="number" />
+
+                            <EditText
+                                android:id="@+id/ediObjeto"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:hint="Nombre del objeto" />
+
+                            <EditText
+                                android:id="@+id/ediCantid"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:hint="Cantidad a recibir"
+                                android:inputType="number" />
+
+                            <EditText
+                                android:id="@+id/ediTiempoPag"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:hint="Tiempo a pagar(Numero en meses)"
+                                android:inputType="number" />
+
+                            <EditText
+                                android:id="@+id/ediInteres"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:hint="Interes"
+                                android:inputType="number" />
+
+                            <TextView
+                                android:id="@+id/tvTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:textSize="30dp"
+                                android:text="" />
+
+                            <Button
+                                android:id="@+id/btnCalcular"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:onClick="calcular"
+                                android:text="Calcular" />
+
+                            <Button
+                                android:id="@+id/btnAgregar"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/folder"
+                                android:onClick="alta"
+                                android:text="Agregar al historial" />
+
+                            <Button
+                                android:id="@+id/btnborra"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/buss"
+                                android:onClick="busca"
+                                android:text="Buscar" />
+
+                            <Button
+                                android:id="@+id/btnmodifi"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/modii"
+                                android:onClick="modi2"
+                                android:text="Modificar" />
+
+                            <Button
+                                android:id="@+id/btnborrarr"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/borr"
+                                android:onClick="borrar"
+                                android:text="Eliminar" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" >
+
+                            <Button
+                                android:id="@+id/btnConsultar"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawableLeft="@drawable/update"
+                                android:onClick="delta"
+                                android:text="Actualizar" />
+
+
+                            <ListView
+                                android:id="@+id/listView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true" >
+                            </ListView>
+
+                            <!-- Spinner Dropdown -->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tab3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:orientation="vertical" >
+
+                            <EditText
+                                android:id="@+id/ediHomeCodigo"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="25dp"
+                                android:hint="Codigo de la casa"
+                                android:inputType="number"/>
+
+                            <EditText
+                                android:id="@+id/ediHomeEmpen"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:hint="Nombre de la casa de empeño" />
+
+                            <EditText
+                                android:id="@+id/ediTasaInters"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:hint="Tasa de interes"
+                                android:inputType="number"/>
+
+                            <Button
+                                android:id="@+id/btnAgregarN"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="8dp"
+                                android:drawableLeft="@drawable/folder"
+                                android:onClick="altar"
+                                android:text="Agregar" />
+
+                            <Button
+                                android:id="@+id/btnact"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawableLeft="@drawable/update"
+                                android:onClick="delta2"
+                                android:text="Actualizar" />
+
+                            <Button
+                                android:id="@+id/btbusk"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawableLeft="@drawable/buss"
+                                android:onClick="busca2"
+                                android:text="Buscar" />
+
+                            <Button
+                                android:id="@+id/btmodii"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawableLeft="@drawable/modii"
+                                android:onClick="modi"
+                                android:text="Modificar" />
+
+                            <Button
+                                android:id="@+id/btborr"
+                                android:layout_width="250dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:drawableLeft="@drawable/borr"
+                                android:onClick="borrar2"
+                                android:text="Borrar" />
+
+                            <ListView
+                                android:id="@+id/listView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentTop="true" >
+                            </ListView>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
+        </LinearLayout>
+    </ScrollView>
+
+    
+
+</LinearLayout>

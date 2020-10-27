@@ -1,0 +1,2 @@
+C:\Users\Gianni\AndroidStudioProjects\CashMove1\app\build\intermediates\classes\debug
+C:\Users\Gianni\AndroidStudioProjects\CashMove1\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-1a46ab23770dba4831e0caa57a4a8e65c1b06af3.jar
